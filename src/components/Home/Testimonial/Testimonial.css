@@ -1,0 +1,13 @@
+.awesome-icon{
+    font-size: 100px;
+    color: rgb(202, 243, 229);
+    position: relative;
+    top: 0;
+    left: 90%;
+}
+
+.client-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}

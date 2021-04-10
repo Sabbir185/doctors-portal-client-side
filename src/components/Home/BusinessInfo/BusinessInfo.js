@@ -16,7 +16,7 @@ const infoData = [
         background:'dark'
     },
     {
-        title:'Contact Us Noe',
+        title:'Contact Us Now',
         description:'+8801725-1515XX',
         icon: faPhone,
         background:'primary'
