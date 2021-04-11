@@ -1,0 +1,9 @@
+.footer-style{
+    color: #3A4256;
+}
+
+.footerBg{
+    background-image: url('../../../images/footer-bg.png');
+    background-size: cover;
+
+}

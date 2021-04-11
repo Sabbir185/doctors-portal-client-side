@@ -1,0 +1,10 @@
+.contact-container{
+    background-image: url('../../../images/appointmentBG.png');
+    background-size: auto;
+
+}
+
+.form-container{
+    background-color: #203047;
+    opacity: 0.9;
+}

@@ -9,7 +9,7 @@ const DoctorInfo = ({ info }) => {
     }
     return (
         <div className="col-md-3 text-center" style={cardStyle}>
-            <img src={info.img} alt="" className='img-fluid d-block mx-auto'/>
+            <img src={info.img} alt="" className='img-fluid w-75'/>
             <h6 className="mt-3">{info.name}</h6>
             <small className="text-secondary"><FontAwesomeIcon icon={faPhoneAlt} className="text-info"></FontAwesomeIcon>{info.phone}</small>
         </div>
