@@ -4,7 +4,7 @@ import Blog from '../Blog/Blog';
 import ContactForm from '../ContactForm/ContactForm';
 import DoctorList from '../DoctorList/DoctorList';
 import FeaturedService from '../FeaturedService/FeaturedService';
-import Footer from '../Footer/Footer';
+import Footer from '../../Shared/Footer/Footer';
 import Header from '../Header/Header';
 import Services from '../Services/Services';
 import Testimonial from '../Testimonial/Testimonial';
