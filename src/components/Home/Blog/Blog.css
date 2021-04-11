@@ -1,0 +1,17 @@
+.first-news{
+    background-image: linear-gradient(60deg, #0bd6b1, #10CFE5);
+    height: 250px;
+    border-radius: 10px;
+    z-index: -50;
+}
+
+.card-style{
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 1px 1px 10px lightgray;
+}
+
+.txt-align{
+    text-align: justify;
+}
+

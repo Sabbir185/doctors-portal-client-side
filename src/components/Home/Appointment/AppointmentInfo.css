@@ -1,0 +1,27 @@
+.main-container{
+    background-color: #3D4457;
+    height: 420px;
+    opacity: .9;
+}
+
+.img-style{
+    height: 550px;
+    transform: translateY(-130px);
+    
+}
+
+
+
+@media only screen and (max-width: 770px) {
+    .main-container{
+        height: auto;
+    }
+    .underLine{
+        border-bottom: 5px solid white;
+        
+    }
+    .text-area{
+        margin-left: 20%;
+        margin-bottom: 20%;
+    }
+  }

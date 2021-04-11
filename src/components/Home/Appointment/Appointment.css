@@ -1,22 +1,7 @@
-.main-container{
-    background-image: url('../../../images/appointmentBG.png');
-    background-repeat: no-repeat;
+.make-appointment{
+    background-image: url("../../../images/appointmentBG.png");
     background-size: auto;
-    height: 420px;
-    background-position: center;
-    margin-top: 12%;
-
-}
-.sub-container{
-    content: "";
-    width: 100%;
-    height: 100%;
-    background-color: rgb(36, 41, 73);
-    opacity: .9;
-    top: 0;
-}
-
-.img-style{
-    height: 550px;
-    transform: translateY(-130px);
+    background-position: auto;
+    height: auto;
+    margin-top: 15%;
 }

@@ -11,3 +11,21 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
 }
+
+@media only screen and (max-width: 1000px) {
+    .client-grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+  }
+@media only screen and (max-width: 676px) {
+    .client-grid{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 20px;
+    }
+    .awesome-icon{
+        left: 35%;
+    }
+  }
