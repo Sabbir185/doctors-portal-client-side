@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
+import AppointmentModal from '../AppointmentModal/AppointmentModal';
 
 const BookCard = (props) => {
     // console.log(props.appDate, props.booking)
     const {title, bookingTime, availableSeat} = props.booking;
+
+    const [modalIsOpen, setIsOpen] = useState(false);
+    function openModal() {
+        setIsOpen(true);
+    }
+
+    function closeModal() {
+        setIsOpen(false);
+    }
 
 
     return (
@@ -11,7 +21,8 @@ const BookCard = (props) => {
                 <h5 className="card-title brand-text1">{title}</h5>
                 <h6 className="card-subtitle mb-2 brand-text2">{bookingTime}</h6>
                 <small className="card-text text-secondary">{availableSeat}</small>
-                <button className="btn btn-info text-uppercase mt-3">appointment</button>
+                <button onClick={openModal} className="btn btn-info text-uppercase mt-3">appointment</button>
+                <AppointmentModal title={title} modalIsOpen={modalIsOpen} closeModal={closeModal}></AppointmentModal>
             </div>
         </div>
     );
