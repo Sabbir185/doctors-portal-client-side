@@ -1,18 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Footer from '../../Shared/Footer/Footer';
 import NavBar from '../../Shared/NavBar/NavBar';
 import AppointmentHeader from '../AppointmentHeader/AppointmentHeader';
+import BookAppointment from '../BookAppointment/BookAppointment';
 
 const AppointmentMain = () => {
-    const handleCalender = (data) => {
-        console.log(data)
+    const [selectedDate, setSelectedDate] = useState(new Date());
+
+    const handleCalender = (date) => {
+        setSelectedDate(date);
     }
 
+    
 
     return (
         <div>
             <NavBar></NavBar>
             <AppointmentHeader handleCalender={handleCalender}></AppointmentHeader>
+            <BookAppointment date={selectedDate}></BookAppointment>
             <Footer></Footer>
         </div>
     );
