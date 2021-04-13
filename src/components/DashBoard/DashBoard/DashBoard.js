@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import SIdebar from '../SIdebar/SIdebar';
 import Calendar from 'react-calendar'
 import 'react-calendar/dist/Calendar.css';
@@ -14,19 +14,22 @@ const DashBoard = () => {
     const [appointments, setAppointment] = useState([]);
 
     const handleCalender = (date) => {
-        setSelectedDate(date);
         const dateApp = date.toDateString();
-        
+        setSelectedDate(dateApp);
+
+    }
+
+    useEffect(()=>{
         fetch("http://localhost:5055/appointmentByDate",{
             method:"POST",
             headers:{'content-type':'application/json'},
-            body:JSON.stringify({dateApp})
+            body:JSON.stringify({dateApp: selectedDate})
         })
         .then(res=> res.json())
         .then(result =>{
             setAppointment(result);
         })
-    }
+    },[selectedDate])
 
 
     return (
