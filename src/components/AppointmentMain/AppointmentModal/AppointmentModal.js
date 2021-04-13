@@ -14,9 +14,28 @@ const customStyles = {
     }
 };
 
-const AppointmentModal = ({ modalIsOpen, closeModal, title }) => {
+const AppointmentModal = ({ modalIsOpen, closeModal, title, bookingTime, appointmentData }) => {
     const { register, handleSubmit, formState: { errors } } = useForm();
-    const onSubmit = data => console.log(data);
+
+    const onSubmit = data => {
+        data.service = title;
+        data.date = appointmentData.toDateString();
+        data.time = bookingTime;
+        data.created = new Date();
+
+        fetch("http://localhost:5055/addAppointment",{
+            method:"POST",
+            headers:{'content-type':'application/json'},
+            body:JSON.stringify(data)
+        })
+        .then(res => res.json())
+        .then( result => {
+            if(result){
+                closeModal();
+                alert("Appointment successful!");
+            }
+        })
+    };
 
     return (
         <div>

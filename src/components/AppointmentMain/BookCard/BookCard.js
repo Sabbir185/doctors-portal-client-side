@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import AppointmentModal from '../AppointmentModal/AppointmentModal';
 
 const BookCard = (props) => {
-    // console.log(props.appDate, props.booking)
+    const appointmentData = props.appDate;
     const {title, bookingTime, availableSeat} = props.booking;
 
     const [modalIsOpen, setIsOpen] = useState(false);
@@ -22,7 +22,7 @@ const BookCard = (props) => {
                 <h6 className="card-subtitle mb-2 brand-text2">{bookingTime}</h6>
                 <small className="card-text text-secondary">{availableSeat}</small>
                 <button onClick={openModal} className="btn btn-info text-uppercase mt-3">appointment</button>
-                <AppointmentModal title={title} modalIsOpen={modalIsOpen} closeModal={closeModal}></AppointmentModal>
+                <AppointmentModal bookingTime={bookingTime} title={title} modalIsOpen={modalIsOpen} closeModal={closeModal} appointmentData={appointmentData}></AppointmentModal>
             </div>
         </div>
     );

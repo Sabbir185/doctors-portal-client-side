@@ -5,6 +5,7 @@ import "firebase/auth";
 import firebaseConfig from './firebase.config';
 import loginSider from '../../../images/loginSider.png'
 import { UserContext } from '../../../App';
+import { useHistory } from 'react-router';
 
 if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);
@@ -15,7 +16,7 @@ if (!firebase.apps.length) {
 
 
 const Login = () => {
-
+    const history = useHistory(); 
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => console.log(data);
@@ -30,6 +31,7 @@ const Login = () => {
                 const {displayName, email, photoURL} = result.user;
                 const googleUserInfo = {name: displayName, email, photoURL};
                 setLoggedInUser(googleUserInfo);
+                email && history.push('/');
             }).catch((error) => {
                 const errorMessage = error.message;
             });
