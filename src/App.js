@@ -9,8 +9,12 @@ import AppointmentMain from './components/AppointmentMain/AppointmentMain/Appoin
 import Login from './components/Login/Login/Login';
 import { createContext, useState } from 'react';
 import DashBoard from './components/DashBoard/DashBoard/DashBoard';
+import AllPatients from './components/AllPatients/AllPatients/AllPatients';
+import AddDoctor from './components/AddDoctor/AddDoctor/AddDoctor';
 
 export const UserContext = createContext();
+
+
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
@@ -29,6 +33,14 @@ function App() {
 
           <Route path="/dashboard/appointment">
             <DashBoard />
+          </Route>
+
+          <Route path="/dashboard/allPatients">
+            <AllPatients></AllPatients>
+          </Route>
+
+          <Route path="/doctor/addADoctor">
+            <AddDoctor></AddDoctor>
           </Route>
 
           <Route path="/login">

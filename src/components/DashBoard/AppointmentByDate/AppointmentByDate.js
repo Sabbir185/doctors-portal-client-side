@@ -1,12 +1,18 @@
 import React from 'react';
+import AppointmentShortList from '../AppointmentShortList/AppointmentShortList';
 
 const AppointmentByDate = ({ selectedDate, appointments }) => {
 
     return (
         <div>
-            <h3>Appointments : {appointments.length}</h3>
+            <h2 className="text-brand text-center">Appointments</h2>
             {
-                appointments.map(data=> <li>{data.fullName}</li>)
+                appointments.length ?
+                 <AppointmentShortList appointments={appointments} ></AppointmentShortList>
+                :
+                <div className="p-5">
+                    <h4 className="lead text-center">No Appointments for this Date</h4>
+                </div>
             }
         </div>
     );
