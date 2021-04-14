@@ -6,17 +6,17 @@ const doctorList = [
     {
         name: 'Dr. Caudi Khan',
         phone: '+1 452200300',
-        img:docImg
+        img:'5.jpg'
     },
     {
         name: 'Dr. Kabir Sighn',
         phone: '+1 452200400',
-        img:docImg
+        img:'father.jpg'
     },
     {
         name: 'Dr. Clark Kant',
         phone: '+1 452200500',
-        img:docImg
+        img:'nasim_vay.jpg'
     }
 ]
 
